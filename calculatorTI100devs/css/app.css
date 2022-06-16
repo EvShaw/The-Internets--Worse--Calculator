@@ -1,0 +1,323 @@
+/* ----------------------------ASSETS -----------------------
+Colors: 
+
+#0A5DA6; <----Blue Base
+#00335f; <----Blue Shadow
+#0079e2; <----Blue Hightlight
+
+
+#D9304F <----Red Base
+#D9303E <----Red Shadow
+
+#1F2621 <----Dark Gray
+
+*/
+/*----------------------------------------------- FONT --------*/
+/* https://www.dafont.com/alarm-clock.font */
+
+/* ---------------------------------- Universal: -------------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------- Universal: -------------*/
+
+* {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+
+/* --------------- Calculator -------------*/
+
+.calculator {
+    background: #0A5DA6;
+
+    width: 400px;
+    height: 675px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+   
+}
+
+
+/* --------------- Calculator: top elements w/ screen -------------*/
+
+.top {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;   
+}
+
+.topBar {
+    width: 100%;
+    height: 35px;
+    border-bottom: 3px solid #00335f;
+    order: 1;
+   
+    
+}
+
+.topBarDark {
+    flex-basis: 80%;
+    height: 10px;
+    background: #00335f;
+    order: 3;
+}
+
+
+.sideBarL, .sideBarR {
+    flex-basis: 10%;
+    height: 85px;
+}
+.sideBarL {
+    order: 2;
+    border-right: 3px solid #00335f;
+    border-bottom: 3px solid #00335f;
+    margin: 0 0 0 -39px;
+}
+
+.screenBorder {
+    background: #3f3f3f;
+    flex-basis: 80%;
+    height: 65px;
+    order: 4;
+    margin: -75px 0 0 39px;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    
+}
+
+.displayScreen {
+    flex-basis: 96%;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    background: rgb(212, 212, 212);
+    margin: auto;
+    text-align: right;
+    font-size: 2em;
+    padding-right: 10px;
+    font-family: 'alarmClock';
+    /* color: red; */
+}
+
+.sideBarR {
+    order: 5;
+    border-left: 3px solid #00335f;
+    border-bottom: 3px solid #00335f;
+    margin: -85px 0 0 0px;
+}
+
+.bottomBarLight {
+    flex-basis: 80%;
+    height: 10px;
+  
+    background: #0079e2;
+    order: 6;
+    margin: -10px 0 0 0px;
+}
+
+.branding {
+    color: white;
+    font-family: sans-serif;
+    font-weight: thin;
+    font-size: 1rem;
+
+    margin: 10px 0 0 21px;
+       
+
+}
+.ti108 {
+    margin: -23px 0 0 220px;
+    font-size: 3rem;
+    font-family: serif;
+    font-weight: bold;
+}
+
+.solar {
+    width: 45%;
+    margin: 0px 0 0 21px;
+    height: 60px;
+    background: #1F2621;
+    display: flex;
+    justify-content: center;
+    box-shadow: inset 3px 3px 6px black;
+    border-bottom: 3px solid #0079e2;
+}
+.panel {
+    flex-basis: 25%;
+    border: 2px solid black;
+    
+}
+
+.bottomBarFullDark {
+    margin: 10px 0 0 1%;
+    width: 98%;
+    border-bottom: 2px solid #00335f;
+}
+
+.bottomBarFullLight {
+    margin-left: 1%;
+    width: 98%;
+    border-bottom: 1px solid #0079e2;
+}
+
+/* ----------------------------------BUTTONS--------------- */
+.buttons {
+    padding: 15px;
+}
+.allButtons {
+    border: 2px solid #00335f;
+    border-radius: 5px;
+    display: flex;
+    width: 98%;    
+    
+    padding: 10px;
+}
+
+.leftButtons {
+    /* border: 1px solid yellow; */
+    flex-basis: 75%;
+    padding: 5px;
+    
+
+    
+}
+
+.rightButtons {
+    /* border: 1px solid rgb(255, 0, 234); */
+    flex-basis: 25%;
+    padding: 5px;
+  
+}
+
+
+.btn {
+    width: 60px;
+    height: 40px;
+    margin: 10px 6px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-bottom: 15px;
+    box-shadow: 1px 0 1px 1px #00335f;
+   
+}
+
+.doubleBTN {
+    height: 100px;
+    padding-bottom: 70px;
+}
+
+.logo {
+    width: 10%;
+    position: absolute;
+    margin: 37px 0 0 2px;
+    color: rgb(255, 255, 255)
+}
+
+.imageFilter {
+    
+    filter: grayscale();
+    opacity: 35%;
+   
+}
+
+.buttonText {
+    font-size: .5;
+}
+
+.redBTN {
+    background: #D9304F; 
+    color: white;
+}
+
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+    bottom:0;
+}
+
+
+/* add in clock font. set in behavior */
+
+@font-face {
+    font-family: alarmClock;
+    src: url("alarmClock.ttf");
+}
+
+.displayText {
+    font-family: alarmClock;
+    font-size: 1.25em;
+    font-weight: normal;
+}
