@@ -104,7 +104,7 @@ let lat
 let long
 
 async function checkSunRise() {
-    // const url = `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${long}&date=${theDateIs}`
+    const url = `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${long}&date=${theDateIs}`
 
     const res = await fetch(url)
     const data = await res.json()
@@ -115,8 +115,6 @@ async function checkSunRise() {
 }
 
 //pulling from my capture array, what time is the sunrise and sunset for the day?
-
-//convert to military time... check am / pm
 
 function sunUpandSunDown() {
     const sunriseIsAt = capture[0].results.sunrise
@@ -164,13 +162,13 @@ function convertSunSetTime() {
 
 function compareTime() {
 
-    // console.log('hi')
-    // if (theTimeIs > todaysSunrise && theTimeIs < todaysSunset) {
-    //     // console.log('The sun is already up')
-    // } else {
-    //     console.log('no sun, no power')
-    //     document.querySelector('.displayText').textContent = 'error'
-    // }
+    console.log('hi')
+    if (theTimeIs > todaysSunrise && theTimeIs < todaysSunset) {
+        // console.log('The sun is already up')
+    } else {
+        console.log('no sun, no power')
+        document.querySelector('.displayText').textContent = 'error'
+    }
 }
 
 // add other time zones... 
